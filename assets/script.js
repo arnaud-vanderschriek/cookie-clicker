@@ -1,6 +1,6 @@
 //variable utilisée
 
-var counterClick; //renmagasine les valeurs counters des autres évents
+var counterClick = 0; //renmagasine les valeurs counters des autres évents
 var counterCandyCane; //nbr de bonus candyCane
 var counterMultiply; //nbr de bonus multiply
 
@@ -15,7 +15,7 @@ var priceCandyCane;
 //Function Click
 
 function click() {
-  document.getElementById("counter").addEventListener("click", () => {
+  document.getElementById("cookie").addEventListener("click", () => {
     counterClick = counterClick + 1;
     console.log("click");
     console.log("counterClick");
@@ -28,10 +28,12 @@ function click() {
 
 //Function Disable
 function disable() {
-  if (couterClick < price) {
-    document.getElementById("?").disable = true;
+  if (counterClick < price) {
+    document.getElementById("emilie").disable = true;
+    document.getElementById("candycane").disable = true;
   } else {
-    document.getElementById("?").disable = false;
+    document.getElementById("emilie").disable = false;
+    document.getElementById("candycane").disable = false;
   }
 }
 setInterval(disable, 500);
