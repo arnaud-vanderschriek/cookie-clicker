@@ -1,6 +1,8 @@
 #big-box
 {
     background-color: #EDDBDD;
+    min-height:100vh;
+    padding:5px;
 }
 #counter-cookie-box
 {
@@ -19,8 +21,7 @@ body {
     padding: 0px;
     margin: 0px;
 }
-
-#big-box {
-    min-height:100vh;
-    padding:5px;
+.button
+{
+    height:33.33%;
 }
