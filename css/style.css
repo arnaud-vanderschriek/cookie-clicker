@@ -1,0 +1,26 @@
+#big-box
+{
+    background-color: #EDDBDD;
+}
+#counter-cookie-box
+{
+    background-color: #E2ADBD;
+}
+#emily-container
+{
+    background-color: #9DCEBD;
+}
+#modifier-container
+{
+    background-color: #F6DEBC;
+}
+body {
+    min-height:100vh;
+    padding: 0px;
+    margin: 0px;
+}
+
+#big-box {
+    min-height:100vh;
+    padding:5px;
+}
