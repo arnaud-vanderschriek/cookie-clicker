@@ -18,12 +18,16 @@ The game had to contain a number of elements. They are:
 
 ## Planning
 
-The first step was getting a good idea of how to construct the game. We worked on a whiteboard to get a schematic understanding of the game. 
-<img src="assets/img/whiteboard.jpeg" height="600px">
+The first step was getting a good idea of how to construct the game. We worked on a whiteboard to get a schematic understanding of the game.
+<br> 
+<img alt="photo of our whiteboard" src="assets/img/whiteboard.jpeg" height="600px">
 <br>
 
 The second step was making a mockup of out pages. 
-<img src="assets/img/mockup.jpg" width="800px">
-
-Day 1 (24 September 2019) : created mockup, planning, first draft of the html and css. We worked in pair programming for the first draft of the html and javascript. In the evening Jeremy D. created the images except the main muffin and the background.
-Day 2 (25 September 2019) : the html and css was further refined by Arnaud, Jeremy and Octavia finished the javascript. By the end of the day the group pulled together and ironed out the last details together.
+<img src="assets/img/mockup.jpg" alt="photo of our mockup" width="800px">
+<ul>
+<li>
+Day 1 (24 September 2019) : created mockup, planning, first draft of the html and css. We worked in pair programming for the first draft of the html and javascript. In the evening Jeremy D. created the images except the main muffin and the background.</li>
+<li>
+Day 2 (25 September 2019) : the html and css was further refined by Arnaud, Jeremy and Octavia finished the javascript. By the end of the day the group pulled together and ironed out the last details together.</li>
+</ul>
