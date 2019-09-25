@@ -2,72 +2,112 @@
     let counterClick=0;
     let multiplicatorCandycane = 0;
     let priceCandycane = 15;
-    let petitDej = new boolean;
-
-    //make the disabler run whenever the mouse mouves
-document.getElementById("body").addEventListener("mouseover", () => {
-    disable();
-});
+    let priceEmilie = 15;
+    let emilieModifier = 1;
+    let petitDej = false;
+    const cookie = document.getElementById("cookie");
+    const counter = document.getElementById("counter");
+    const bigBox = document.getElementById("big-box");
 
     //add click to counter
-document.getElementById("cookie").addEventListener( "click" , () => {
+    cookie.addEventListener( "click" , () => {
+    console.log("yes");
     if (petitDej == true){
     counterClick = (counterClick + 1)*2;
     }
+    if (emilieModifier > 1){
+        counterClick = counterClick + (1*emilieModifier);
+    } 
     else {
-    counterClick = counterClick + 1;}
+    counterClick = counterClick + 1;
+    }
+    disableEmilie();
+    disableCandycane();
     document.getElementById("counter").innerText = counterClick;
 });
+
+//Counter onchange check buttons
+//=============================
+bigBox.addEventListener("mousemove", disableEmilie);
+bigBox.addEventListener("mousemove", disableCandycane);
 
 //Candycane modifier
 //=================
 document.getElementById("candycane").addEventListener("click", () => {
-    console.log("candycane");
-    multiplicatorCandycane=+1; //value to decrease the time interval
+    
+    multiplicatorCandycane+=1; 
+    
     //remove price from counter
     counterClick = counterClick - priceCandycane;
-    document.getElementById("counter").innerText = counterClick;
+    counter.innerText = counterClick;
+    disableCandycane();
     //update the price
     priceCandycane = priceCandycane + 15;
     document.getElementById("candycane").innerText = ("Add another Candy Cane for "+priceCandycane);
-    
+    // images in the right place
     const candyImage = document.createElement("img");
-    candyImage.setAttributes("src","assets/img/candycane.png");
+    candyImage.setAttribute("src","assets/img/candycane.png");
+    candyImage.setAttribute("class", "img-fluid");
+    candyImage.setAttribute("width","100px");
     const target = document.getElementById("emilie-container")
-
-//got this from Stack Exchange, doesn't seem to work
+    target.appendChild(candyImage);
+    
+    //create autoclicker
     let interval = 5000;
-    let run = setInterval(addcount,interval);
+    let run = setInterval(addCount,interval);
     
     function addCount() {
         console.log(interval);
-        clearInterval(run); 
-        interval = (5000 / multiplicatorCandycane);
-        counterClick = counterClick+1;
-        run = setInterval(addCount,interval);
+        counterClick = counterClick+(1*multiplicatorCandycane);
+        counter.innerText = counterClick;
+
     }
     
    });
 
 //Emilie modifier
 //==============
-document.getElementById("emilie").addEventListener("click", () => {
-    console.log("emilie")
-    alert("Chocolat?");
-});
+    document.getElementById("emilie").addEventListener("click", () => {
+    emilieModifier+=1;
+    alert("Chocolat? \n"+"A présent vos clicks sont x "+emilieModifier);
+    
+    //update price and counter
+    counterClick = counterClick - priceEmilie;
+    counter.innerText = counterClick;
+    disableEmilie();
+    priceEmilie = priceEmilie + 15;
+    document.getElementById("emilie").innerText = ("Add another Emilie for "+priceEmilie);
+    //
+    //add images in the right place
+    const emilieImage = document.createElement("img");
+    emilieImage.setAttribute("src","assets/img/emilie.jpg");
+    emilieImage.setAttribute("class", "img-fluid");
+    emilieImage.setAttribute("width","100px");
+    const target = document.getElementById("emilie-container")
+    target.appendChild(emilieImage);
+    
+    });
 
 
-//Disabler
-//=======
-  function disable() {
-    if (counterClick < price) {
-      document.getElementById("emilie").disabled = true;
-      document.getElementById("candycane").disabled = true;
+
+//Disablers
+//========
+  function disableEmilie() {
+    if (counterClick < priceEmilie) {
+        console.log("disable emilie on");
+        document.getElementById("emilie").disabled = true;
     } else {
       document.getElementById("emilie").disabled = false;
-      document.getElementById("candycane").disabled = false;
     }
   }
+
+function disableCandycane() {
+    if (counterClick < priceCandycane) {
+        document.getElementById("candycane").disabled = true;
+    } else {
+        document.getElementById("candycane").disabled = false;  
+    }
+}
 
 //PetitDej
 //========
@@ -87,8 +127,6 @@ function timer() {
 
 document.getElementById("petitdej").addEventListener( "click", () => {
     petitDej = true;
+});
 
-}
-
-window.onload //play timer function on load to start out with the petitdej disabled for x seconds
 })();
