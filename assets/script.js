@@ -37,11 +37,11 @@ document.getElementById("candycane").addEventListener("click", () => {
   //Function Disable
   function disable() {
     if (counterClick < price) {
-      document.getElementById("emilie").disable = true;
-      document.getElementById("candycane").disable = true;
+      document.getElementById("emilie").disabled = true;
+      document.getElementById("candycane").disabled = true;
     } else {
-      document.getElementById("emilie").disable = false;
-      document.getElementById("candycane").disable = false;
+      document.getElementById("emilie").disabled = false;
+      document.getElementById("candycane").disabled = false;
     }
   }
 
