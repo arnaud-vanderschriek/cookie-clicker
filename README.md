@@ -20,7 +20,7 @@ The game had to contain a number of elements. They are:
 
 The first step was getting a good idea of how to construct the game. We worked on a whiteboard to get a schematic understanding of the game.
 <br> 
-<img alt="photo of our whiteboard" src="assets/img/whiteboard.jpeg" height="600px">
+<img alt="photo of our whiteboard" src="assets/img/outline.jpeg" height="600px">
 <br>
 
 The second step was making a mockup of out pages. 
