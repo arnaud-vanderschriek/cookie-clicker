@@ -1,20 +1,49 @@
+
+body
+{
+    background-image: url(../img/goodOne.png);
+    background-position:fixed;
+    height: 100vh; 
+    margin:0;
+    padding:0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#main-container
+{
+    height: 100%;
+    padding:15px 15px 15px 15px;
+}
 #big-box
 {
-    background-color: #EDDBDD;
-    min-height:100vh;
-    padding:5px;
+    
+    height: 100%;
+    border: 20px solid #9DCEBD;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    
+    
 }
 #counter-cookie-box
 {
     background-color: #E2ADBD;
+    border: 10px solid #E2ADBD;
+    border-radius: 10px;
+    height: 100%;
+    
 }
 #emily-container
 {
     background-color: #9DCEBD;
+    border: 10px solid #E2ADBD;
+    border-radius: 10px;
 }
 #modifier-container
 {
     background-color: #F6DEBC;
+    border: 10px solid #E2ADBD;
+    border-radius: 10px;
 }
 body {
     min-height:100vh;
@@ -23,5 +52,16 @@ body {
 }
 .button
 {
-    height: 33.33%;
+    height:33.333%;
+    background-color: #E7EEE9;
+}
+#cookie:active
+{
+    
+    transform: translateY(4px);
+}
+#cuisto-container
+{
+    src: url("../img/cuisto.jpeg");
+
 }
