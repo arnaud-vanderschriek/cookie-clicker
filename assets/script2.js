@@ -2,8 +2,8 @@
   let counterClick = 0;
   let multiplicatorCandycane = 0;
   let priceCandycane = 15;
-  let priceEmilie = 15;
-  let emilieModifier = 1;
+  let priceemily = 15;
+  let emilyModifier = 1;
   let petitDej = false;
   const cookie = document.getElementById("cookie");
   const counter = document.getElementById("counter");
@@ -14,12 +14,12 @@
     if (petitDej == true) {
       counterClick = counterClick + 1 * 3;
     }
-    if (emilieModifier > 1) {
-      counterClick = counterClick + 1 * emilieModifier;
+    if (emilyModifier > 1) {
+      counterClick = counterClick + 1 * emilyModifier;
     } else {
       counterClick = counterClick + 1;
     }
-    disableEmilie();
+    disableemily();
     disableCandycane();
     document.getElementById("counter").innerText = counterClick;
   });
@@ -41,7 +41,7 @@
     candyImage.setAttribute("src", "assets/img/candycane.png");
     candyImage.setAttribute("class", "img-fluid");
     candyImage.setAttribute("width", "100px");
-    const target = document.getElementById("emilie-container");
+    const target = document.getElementById("emily-container");
     target.appendChild(candyImage);
 
     //create autoclicker
@@ -55,36 +55,36 @@
     }
   });
 
-  //Emilie modifier
+  //emily modifier
   //==============
-  document.getElementById("emilie").addEventListener("click", () => {
-    emilieModifier += 1;
-    alert("Chocolat? \n" + "A présent vos clicks sont x " + emilieModifier);
+  document.getElementById("emily").addEventListener("click", () => {
+    emilyModifier += 1;
+    alert("Chocolat? \n" + "A présent vos clicks sont x " + emilyModifier);
 
     //update price and counter
-    counterClick = counterClick - priceEmilie;
+    counterClick = counterClick - priceemily;
     counter.innerText = counterClick;
-    disableEmilie();
-    priceEmilie = priceEmilie + 15;
-    document.getElementById("emilie").innerText =
-      "Add another Emilie for " + priceEmilie;
+    disableemily();
+    priceemily = priceemily + 15;
+    document.getElementById("emily").innerText =
+      "Add another emily for " + priceemily;
     //
     //add images in the right place
-    const emilieImage = document.createElement("img");
-    emilieImage.setAttribute("src", "assets/img/emilie.jpg");
-    emilieImage.setAttribute("class", "img-fluid");
-    emilieImage.setAttribute("width", "100px");
-    const target = document.getElementById("emilie-container");
-    target.appendChild(emilieImage);
+    const emilyImage = document.createElement("img");
+    emilyImage.setAttribute("src", "assets/img/icone/Emilie.png");
+    emilyImage.setAttribute("class", "img-fluid");
+    emilyImage.setAttribute("width", "100px");
+    const target = document.getElementById("emily-container");
+    target.appendChild(emilyImage);
   });
 
   //Disablers
   //========
-  function disableEmilie() {
-    if (counterClick < priceEmilie) {
-      document.getElementById("emilie").disabled = true;
+  function disableemily() {
+    if (counterClick < priceemily) {
+      document.getElementById("emily").disabled = true;
     } else {
-      document.getElementById("emilie").disabled = false;
+      document.getElementById("emily").disabled = false;
     }
   }
 
@@ -106,12 +106,13 @@
     imageCuisto.setAttribute("src", "assets/img/cuisto2.png");
     let my_timeout = setTimeout(function() {
       document.getElementById("petitdej").disabled = true;
-    }, 10000);
+      imageCuisto.setAttribute("src", " ");
+    }, 5000);
   }
 
   function time() {
     disablePetitdej();
-    disableEmilie();
+    disableemily();
     disableCandycane();
     let nbr = Math.floor(Math.random() * 20);
     let time = nbr * 1000;
@@ -124,8 +125,9 @@
     setTimeout(function() {
       petitDej = false;
       console.log("repasse en false");
+      imageCuisto.setAttribute("src", " ");
       time();
-    }, 10000);
+    }, 5000);
   });
 
   window.onload = time;

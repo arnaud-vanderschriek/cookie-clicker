@@ -35,7 +35,7 @@ body
     height: 100%;
     
 }
-#emilie-container
+#emily-container
 {
     background-color: #9DCEBD;
     border: 10px solid #E2ADBD;
@@ -57,15 +57,20 @@ body {
     height:33.333%;
     background-color: #E7EEE9;
 }
+.col-but
+{
+    background-color: #9DCEBD;
+}
 #counter
 {
     background: url(../img/boutton.png);
     background-size: cover;
-    height: 30%;
+    height: 100%;
     width: 100px;
     border:none;
     color:white;
-    text-shadow: rgb(0,0,0,0.9);
+    text-shadow: rgba(0,0,0,0.9);
+    font-weight: bolder;
 }
 #cookie
 {
