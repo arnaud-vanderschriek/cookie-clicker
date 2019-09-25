@@ -25,7 +25,7 @@ body
 }
 #counter-container
 {
-    background-color: rgba(246, 222, 188, 0.8);
+    background-color: transparent;
 }
 #counter-cookie-box
 {
@@ -35,7 +35,7 @@ body
     height: 100%;
     
 }
-#emily-container
+#emilie-container
 {
     background-color: #9DCEBD;
     border: 10px solid #E2ADBD;
@@ -61,7 +61,17 @@ body {
 {
     background: url(../img/boutton.png);
     background-size: cover;
-    width: auto;
+    height: 30%;
+    width: 100px;
+    border:none;
+    color:white;
+    text-shadow: rgb(0,0,0,0.9);
+}
+#cookie
+{
+    position: relative;
+    z-index: 0;
+    
 }
 #cookie:active
 {
@@ -69,6 +79,40 @@ body {
     transform: translateY(4px);
 }
 #cuisto
+{   
+    position: absolute;
+    left:5px;
+    bottom: 5px;
+    z-index: 1;
+    animation-name: cuisto;
+    animation-duration: 1s ;
+}
+@keyframes cuisto
 {
-    display: none;
+    from{
+        margin-bottom: -40%;
+    }
+    to{
+        margin-bottom: 2%;
+    }
+}
+@media screen and (max-width:500px){
+    
+  
+    #cuisto
+    {
+        height:30%;
+        position: absolute;
+    left:5px;
+    bottom: 5px;
+    z-index: 1;
+    animation-name: cuisto;
+    animation-duration: 1s ;
+
+    }
+    #cookie
+    {
+        height: 100%;
+      
+    }
 }
