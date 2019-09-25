@@ -22,12 +22,14 @@ body
     border-radius: 10px;
     padding: 20px;
     margin: auto;
-    
-    
+}
+#counter-container
+{
+    background-color: rgba(246, 222, 188, 0.8);
 }
 #counter-cookie-box
 {
-    background-color: #E2ADBD;
+    background-color: transparent;
     border: 10px solid #E2ADBD;
     border-radius: 10px;
     height: 100%;
@@ -55,13 +57,18 @@ body {
     height:33.333%;
     background-color: #E7EEE9;
 }
+#counter
+{
+    background: url(../img/boutton.png);
+    background-size: cover;
+    width: auto;
+}
 #cookie:active
 {
     
     transform: translateY(4px);
 }
-#cuisto-container
+#cuisto
 {
-    src: url("../img/cuisto.jpeg");
-
+    display: none;
 }
